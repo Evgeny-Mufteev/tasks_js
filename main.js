@@ -758,12 +758,137 @@
 // станет равно 1. Результат записать в строку или массив и вывести в
 // консоль.
 
-// const getSequenceNumbers = () => {
-//   let num = +prompt("Введите число");
-//   if (num % 2 == 0) {
-//     return num / 2;
-//   } else {
-//     return num * 3 + 1;
+// let inputNumb = +prompt("Enter number");
+
+// const sequenceNumb = (num) => {
+//   const arrayNumb = [num];
+
+//   while (num !== 1) {
+//     if (num % 2 === 0) {
+//       console.log("(делим на 2)", (num = num / 2));
+//       arrayNumb.push(num);
+//     } else if (num % 2 !== 0) {
+//       console.log("(умножаем на 3 + 1)", (num = num * 3 + 1));
+//       arrayNumb.push(num);
+//     }
 //   }
+
+//   return arrayNumb;
 // };
-// getSequenceNumbers();
+
+// console.log(sequenceNumb(inputNumb));
+
+// 41). Сделайте функцию, которая возвращает квадрат числа. Число передается
+// параметром.
+
+// const getSquareNumber = (number, exponent) => {
+//   return Math.pow(number, exponent);
+// };
+// console.log(getSquareNumber(7, 2));
+
+// 42). Сделайте функцию, которая возвращает сумму двух чисел.
+
+// const getSum = (num1, num2) => {
+//   return num1 + num2;
+// };
+// console.log(getSum(21, 21));
+
+// 43). Сделайте функцию, которая отнимает от первого числа второе и делит на
+// третье.
+
+// const calcExpression = (num1, num2, num3) => {
+//   return (num1 - num2) / num3;
+// };
+// console.log(calcExpression(256, 42, 2));
+
+// 44). Сделайте функцию, которая принимает параметром число от 1 до 7, а
+// возвращает день недели на русском языке.
+
+// const getDayWweek = (num) => {
+//   const week = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
+//   //   короткое решение
+//   return week[num - 1];
+//   //   длинне решение
+//   //   week.forEach((day, index) => {
+//   //     if (num == index + 1) return console.log(day);
+//   //   });
+// };
+// console.log(getDayWweek(5));
+
+// 45). Сделайте функцию, которая параметрами принимает 2 числа. Если эти числа
+// равны - пусть функция вернет true, а если не равны - false.
+
+// const checkingEquality = (num1, num2) => {
+//   // длинная запись
+//     if (num1 === num2) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   //   короткая запись
+//   return num1 === num2 ? true : false;
+// };
+// console.log(checkingEquality(5, 5));
+
+// 46). Сделайте функцию, которая параметрами принимает 2 числа. Если их сумма
+// больше 10 - пусть вернет true, а если нет то - false.
+
+// const calcSum = (num1, num2) => {
+//   // длинная запись
+//   if (num1 + num2 > 10) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+//   //   короткая запись
+//   return num1 + num2 > 10 ? true : false;
+// };
+// console.log(calcSum(5, 6));
+
+// 47). Сделайте функцию, которая параметром принимает число и проверяет -
+// отрицательное оно или нет. Если отрицательное - пусть функция вернет true, а
+// если нет - false.
+
+// const checkingNumber = (num) => {
+// длинная запись
+// if (num < 0) {
+//   return true;
+// } else {
+//   return false;
+// }
+//   короткая запись
+//   return num < 0 ? true : false;
+// };
+// console.log(checkingNumber(-54));
+
+// 48). Сделайте функцию isNumberInRange, которая параметром принимает
+// число и проверяет, что оно больше нуля и меньше 10. Если это так - пусть
+// функция возвращает true, если не так - false.
+
+// const isNumberInRange = (num) => {
+//   // длинная запись
+//   if (num > 0 && num < 10) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+//   // короткая запись
+//   return num > 0 && num < 10 ? true : false;
+// };
+// console.log(isNumberInRange(15));
+
+// 49). Создайте функцию rgb(), которая будет принимать три числовых аргумента и
+// возвращать строку вида «rgb(23,100,134)». Если аргументы не заданы, считать их
+// равными нулю. Не проверять переменные на тип данных
+
+// const rgb = (arg1, arg2, arg3) => {
+//   return `rgb(${arg1},${arg2},${arg3})`;
+// };
+// console.log(rgb(178, 34, 34));
+
+// 50). Написать функцию, которая принимает в себя три параметра - число и две
+// функции. Первая переданная функция возвращает возведенное в квадрат
+// переданное число и будет вызываться, если число четное. Вторая
+// переданная коллбэк-функция будет вызываться с переданным в нее числом
+// , если число нечетное, и будет возвращать число, увеличенное на 1.
+
