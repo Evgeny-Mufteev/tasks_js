@@ -892,3 +892,153 @@
 // переданная коллбэк-функция будет вызываться с переданным в нее числом
 // , если число нечетное, и будет возвращать число, увеличенное на 1.
 
+// const func1 = (number) => Math.pow(number, 2);
+// const func2 = (number) => number + 1;
+
+// const calcNumber = (num, funcOne, funcTwo) => (num % 2 === 0 ? funcOne(num) : funcTwo(num));
+
+// console.log(calcNumber(7, func1, func2));
+
+// 51). Написать функцию mult(num1, num2 , num3) принимающую 3 числа.
+// Функцию перемножает num1 и num2 столько раз, сколько указано в третьем
+// аргументе num3. Значения num1 и num2 по умолчанию 1, num3 по
+// умолчанию 2.
+
+// const mult = (num1 = 1, num2 = 1, num3 = 2) => {
+//   return (result = Math.pow(num1 * num2, num3));
+// };
+// console.log(mult(2, 2, 3));
+
+// 52). Написать функцию, которая принимает 3 аргумента(каждый аргумент - 1
+//     слово) и возвращает строку с этими 3 словами, расположенными в
+//     алфавитном порядке
+
+// const getStr = (word1, word2, word3) => {
+//   const arrStr = [];
+//   arrStr.push(word1, word2, word3);
+//   arrStr.sort();
+//   return String(arrStr);
+// };
+// console.log(getStr("я", "решаю", "задачу"));
+
+// 53). Дан массив с числами. Запишите в новый массив только те числа, которые
+// больше нуля и меньше 10-ти. Для этого используйте вспомогательную
+// функцию isNumberInRange из предыдущей задачи.
+
+// const pushArr = () => {
+//   const arrNum = [0, 4, -2, 4, -6, 8, 9, -10];
+//   const newArr = [];
+//   arrNum.forEach((el) => {
+//     if (el > 0 && el < 10) {
+//       newArr.push(el);
+//     }
+//   });
+//   return newArr;
+// };
+// console.log(pushArr());
+
+// 54). Сделайте функцию getDigitsSum (digit - это цифра), которая параметром
+// принимает целое число и возвращает сумму его цифр
+
+// const getDigitsSum = (digit) => {
+//   let count = 0;
+//   for (let i = 0; i <= digit; i++) count += i;
+//   return count;
+// };
+// console.log(getDigitsSum(58));
+
+// 55). Найдите все года от 1 до 2020, сумма цифр которых равна 13. Для этого
+// используйте вспомогательную функцию getDigitsSum из предыдущей
+// задачи.
+
+// const getDigitsSum = (digit) => {
+//   str = String(digit);
+//   let num = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     num += +str[i];
+//   }
+//   return num;
+// };
+// // console.log(getDigitsSum(12));
+
+// const getYears = (func) => {
+//   let arrYears = [];
+//   for (let i = 0; i <= 2020; i++) {
+//     if (getDigitsSum(i) === 13) {
+//       arrYears.push(i);
+//     }
+//   }
+//   return arrYears;
+// };
+// console.log(getYears(getDigitsSum));
+
+// 56). Сделайте функцию isEven() (even - это четный), которая параметром
+// принимает целое число и проверяет: четное оно или нет. Если четное - пусть
+// функция возвращает true, если нечетное - false.
+
+// const isEven = (num) => {
+//   return num % 2 === 0 ? true : false;
+// };
+// console.log(isEven(13));
+
+// 57). Дан массив с целыми числами. Создайте из него новый массив, где
+// останутся лежать только четные из этих чисел. Для этого используйте
+// вспомогательную функцию isEven из предыдущей задачи.
+
+// const getArrEvenNum = (func) => {
+//   const arr = [1, 3, 5, 24, 63, 23, 1, 2, 4, 234, 4325, 34, 53, 45, 3];
+//   return arr.map((item) => (func(item) ? item : "")).filter(Boolean);
+// };
+// console.log(getArrEvenNum(isEven));
+
+// 58. Сделайте функцию getDivisors, которая параметром принимает число и
+// возвращает массив его делителей (чисел, на которое делится данное
+// число).
+
+// const getDivisors = (num) => {
+//   let arr = [];
+//   for (let i = 1; i <= num; i++) {
+//     if (num % i === 0) {
+//       arr.push(i);
+//     }
+//   }
+//   return arr;
+// };
+// console.log(getDivisors(24));
+
+// 59). Дан массив с числами. Выведите последовательно его элементы используя
+// рекурсию и не используя цикл.
+
+// const showArr = (count) => {
+//   const arr = [1, 3, 5, 24, 63, 23, 1, 2, 4, 234, 4325, 34, 53, 45, 3];
+//   if (count < arr.length) {
+//     console.log(arr[count++]);
+//     showArr(count);
+//   }
+// };
+// showArr(0);
+
+// 60). Дано число. Сложите его цифры. Если сумма получилась более 9-ти, опять
+// сложите его цифры. И так, пока сумма не станет однозначным числом (9 и
+// менее).
+
+// const getDigitsSum = (digit) => {
+//   if (digit === 0) return 0;
+//   return (digit - 1) % 9 + 1
+// };
+// console.log(getDigitsSum(1591));
+
+// const recSum1 = (num) => {
+//   // преобразую в строку
+//   let str = num + "";
+// //   console.log(str);
+//   // получаю массив чисел из строки
+//   let arrStr = str.split("");
+// //   console.log(arrStr);
+//   // складываю числа массива
+//   let sumArr = arrStr.reduce((a, b) => ((sum = +a + +b) < 9 ? sum : recSum1(sum, 9)));
+//   console.log(sumArr);
+// };
+
+// recSum1(1591);
+
