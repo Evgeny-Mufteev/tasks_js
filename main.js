@@ -1042,3 +1042,126 @@
 
 // recSum1(1591);
 
+// 61). Удаление указанного количества символов из строки
+// Напишите функцию delete_characters(str, length), которая возвращает
+// подстроку, состоящую из указанного количества символов.
+
+// const delete_characters = (str, length) => {
+//    return str.slice(0, length);
+// };
+// console.log(delete_characters("Каждый охотник желает знать", 9));
+
+// 62). Вставить тире между словами строки Напишите функцию
+// insert_dash(str), которая принимает строку str в качестве
+// аргумента и вставляет тире (-) между словами. При этом все
+// символы строки необходимо перевести в верхний регистр.
+
+// const insert_dash = (str) => {
+//     return str.split(" ").join("-")
+// }
+// console.log(insert_dash("HTML JavaScript PHP"));
+
+// 63). Сделать первую букву строки прописной
+// Напишите функцию, которая принимает строку в качестве аргумента и
+// преобразует регистр первого символа строки из нижнего регистра в верхний.
+
+// const cursive_letter = (str) => {
+//     console.log(str[0].toUpperCase() + str.slice(1));
+// }
+// cursive_letter("string not starting with capital");
+
+// 64). Первая буква каждого слова заглавная
+// Напишите функцию capitalize(str), которая возвращает строку, в которой
+// каждое слово начинается с заглавной буквы.
+
+// const capitalize = (str) => {
+//   let newStr = "";
+
+//   for (let i = 0; i < str.length; i++) {
+//     let newSimbol;
+//     // Длинная запись
+//     // if (str[i] === " " || i === 0) {
+//     //   newSimbol = str[i].toUpperCase();
+//     // } else {
+//     //   newSimbol = str[i];
+//     // }
+//     // короткая запись
+//     str[i] === " " || i === 0 ? (newSimbol = str[i].toUpperCase()) : (newSimbol = str[i]);
+//     newStr = newStr + newSimbol;
+//   }
+//   return newStr;
+// };
+// console.log(capitalize("каждый охотник желает знать"));
+
+// 65). Смена регистра символов строки
+// Напишите функцию change_register(str), которая принимает в качестве
+// аргумента строку и и заменяет регистр каждого символа на противоположный.
+// Например, если вводится «КаЖдЫй ОхОтНиК», то на выходе должно быть «кАжДыЙ
+// оХоТнИк».
+
+// const change_register = (str) => {
+//   let newStr = "";
+
+//   for (i = 0; i < str.length; i++) {
+//     str[i] === str[i].toLowerCase() ? (newStr += str[i].toUpperCase()) : (newStr += str[i].toLowerCase());
+//   }
+//   return newStr;
+// };
+// console.log(change_register("КаЖдЫй ОхОтНиК жЕлАеТ зНаТь"));
+
+// 66). Удалить все не буквенно-цифровые символы
+// Напишите функцию remove_char(str), которая возвращает строку,
+// очищенную от всех не буквенно-цифровых символов.
+
+// const remove_char = (str) => {
+//     return str.replace(/[^0-9A-Z]+/gi,"");
+// }
+// console.log(remove_char("every., -/ hunter #! wishes ;: {} to $ % ^ & *know"));
+
+// 67). Нулевое заполнение строки
+// Напишите функцию zeros(num, len), которая дополняет нулями до указаной
+// длины числовое значение с дополнительным знаком «+» или « -« в
+// зависимости от передаваемого аргумента.
+
+// const zeros = (row, num, sign) => {
+//   const str = row.padStart(num, sign);
+//   const str1 = row.padEnd(num, sign);
+
+//   return `'+${str}'`;
+// };
+// console.log(zeros("test", 10, "0"));
+
+// 68). Сравнение строк без учёта регистра
+// Напишите функцию comparison(str1, str2), которая сравнивает строки
+// без учёта регистра символов.
+
+// const comparison = (str1, str2) => {
+//   return str1.toLowerCase() === str2.toLowerCase();
+// };
+// console.log(comparison("Я решаю задачу", "Задачу решаю я"));
+
+// 69). Поиск без учета регистра
+// Напишите функцию insensitive_search(str1, str2), которая
+// осуществляет поиск подстроки str2 в строкеstr1 без учёта регистра
+// символов.
+
+// const insensitive_search = (str1, str2) => {
+//  return str1.toLowerCase().indexOf(str2)
+// }
+// console.log(insensitive_search("Я решаю задачу", "а"));
+
+// 70). ВерблюжийРегистр (CamelCase)
+// Напишите функцию initCap(str), которая преобразует стиль написания
+// составных слов строки в CamelCase, при котором несколько слов пишутся
+// слитно без пробелов, при этом каждое слово внутри строки пишется с
+// заглавной буквы
+
+// const initCap = (str) => {
+//   let newArr = [];
+//   newStr = str.toLowerCase().split(" ");
+//   newStr.forEach((el) => {
+//     newArr.push(el[0].toUpperCase() + el.slice(1));
+//   });
+//   return newArr.join("");
+// };
+// console.log(initCap("hEllo world KJSFdscv Dgd djDq"));
