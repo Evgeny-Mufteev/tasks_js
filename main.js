@@ -1165,3 +1165,155 @@
 //   return newArr.join("");
 // };
 // console.log(initCap("hEllo world KJSFdscv Dgd djDq"));
+
+// 71). Змеиный_регистр (snake_case)
+// Напишите функцию initSnake(str), которая преобразует стиль написания
+// составных слов строки из CamelCase в snake_case, при котором несколько
+// слов разделяются символом подчеркивания (_), причём каждое слово пишется
+// с маленькой буквы.
+
+// const initSnake = (str) => {
+//   newArr = str.toLowerCase().split(" ");
+//   let newStr = newArr.join("_");
+//   return newStr;
+// };
+// console.log(initSnake("hEllo world KJSFdscv Dgd djDq"));
+
+// 82). Повторить строку n раз
+// Напишите функцию repeatStr(str, n), которая вовращает строку повторяемую
+// определённое количество раз.
+
+// const repeatStr = (str, n) => str.repeat(n);
+// console.log(repeatStr("Hello world.", 7));
+
+// 83). Получить имя файла
+// Напишите функцию path(pathname), которая вовращает имя файла
+// (подстрока после последнего символа "/" ) из полного пути к файлу.
+
+// const path = (pathname) => {
+//   let str = pathname.lastIndexOf("/");
+//   let name = pathname.slice(str + 1);
+//   return name
+// };
+// console.log(path("/home/user/dir/file.txt"));
+
+// 84). Заканчивается ли строка символами другой строки
+// Создайте метод объекта String endsWith(), который сравнивает подстроку
+// str1 с окончанием исходной строки str и определяет заканчивается ли строка
+// символами подстроки.
+
+// const coincidence = (str, str1, str2) => {
+//      console.log(str.endsWith(str1));
+//      console.log(str.endsWith(str2));
+// };
+// coincidence("Каждый охотник желает знать", "скрипт", "знать");
+
+// 85). Подстрока до/после указанного символа
+// Напишите функцию getSubstr(str, char, pos), которая возвращает часть
+// строки, расположенную после или до указанного символа char в зависимости
+// от параметра pos.
+
+// const getSubstr = (str, char, pos) => {
+//   if (pos == ">") return str.slice(str.indexOf(char) + 1);
+//   else if (pos == "<") return str.slice(0, str.indexOf(char));
+//   else return str;
+// };
+// console.log(getSubstr("Астрономия — Наука о небесных телах", "аука", ">"));
+
+// 86). Вставить подстроку в указанную позицию строки
+// Напишите функцию insert(str, substr, pos), которая вставляет
+// подстроку substr в указханную позицию pos строки str. По умолчанию
+// подстрока вставляется в начало строки.
+
+// const insert = (str, substr, pos) => {
+//   let newArr = str.split("");
+//   newArr.splice(pos, 0, substr);
+//   return newArr.join("");
+// };
+// console.log(insert("Астрономия — Наука о небесных телах", "крохи", 5));
+
+// 87). Ограничить длину строки
+// Напишите функцию limitStr(str, n, symb), которая обрезает строку, если
+// она длиннее указанного количества символов n. Усеченная строка должна
+// заканчиваться троеточием «...» (если не задан параметр symb) или заданным
+// символом symb.
+
+// const limitStr = (str, n, symb = "...") => {
+//   if (str.length >= n) {
+//     return `${str.slice(0, n)}${symb}`;
+//   }
+// };
+// console.log(limitStr("Астрономия — Наука о небесных телах", 19, "~/"));
+
+// 88). Поделить строку на фрагменты.
+
+// const cutString = (str, n) => {
+//     let arrStr = [];
+//     for(let i = 0 ; i < str.length; i += n) {
+//       arrStr.push(str.substr(i, n));
+//     }
+//     return arrStr;
+// };
+// console.log(cutString("Астрономия — Наука о небесных телах", 7));
+
+// 89). Количество вхождений символа в строке
+// Напишите функцию count(str, stringsearch), которая возвращает
+// количество символов stringsearch в строке str.
+
+// const count = (str, stringsearch) => {
+//   let count = 0;
+//   for (let i = 0; i <= str.length; ++i) {
+//     if (str[i] == stringsearch) count++;
+//   }
+//   return count;
+// };
+// console.log(count("Астрономия — Наука о небесных телах", "а"));
+
+// 90). Удалить лишние пробелы из строки
+// Напишите функцию strip(str), которая удаляет все лишние пробелы из
+// строки str.
+
+// const strip = (str) => {
+//    return str.replace(/(^[^ ]* )|[ ]+/g, ' ').trim();
+// }
+// console.log(strip("   Max is a good    boy   "));
+
+// 91). Удалить лишние слова из строки
+// Напишите функцию cutString(str, n), которая удаляет лишние слова из строки
+// str, оставив в ней n слов.
+
+// const cutString = (str, n) => {
+//    return str = str.split(" ", n).join(" ");
+// };
+// console.log(cutString("Сила тяжести приложена к центру масс тела", 4));
+
+// 92). Сортировка символов строки по алфавиту
+// Напишите функцию alphabetize(str), которая возвращает строку, отсортировав её
+// символы в алфавитном порядке.
+
+// const alphabetize = (str, reverse = false) => {
+//   const compare = new Intl.Collator("ru").compare;
+//   return str
+//     .split("")
+//     .sort((a, b) => (reverse ? -1 : 1) * compare(a, b))
+//     .join("");
+// };
+// console.log(alphabetize("Сила тяжести приложена к центру масс тела"));
+
+// 93). Найти слово в строке
+// Напишите функцию findWord(word, str), которая проверяет, существует ли в
+// строке str слова word.
+
+// const findWord = (word, str) => {
+//   return  word.includes(str);
+// };
+// console.log(findWord("abc def ghi jkl mno pqr stu", "mno"));
+
+// 94. Преобразовать строку в массив слов
+// Напишите функцию stringToarray(str), которая преобразует строку в
+// массив слов.
+
+// const stringToarray = (str) => {
+//     return str.split(" ")
+// }
+// console.log(stringToarray('Каждый охотник желает знать'));
