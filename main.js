@@ -1317,3 +1317,109 @@
 //     return str.split(" ")
 // }
 // console.log(stringToarray('Каждый охотник желает знать'));
+
+// 95). Используя метод map() напишите код, который получает из массива строк
+// новый массив, содержащий их длины.
+
+// const getLengthVegetables = () => {
+//   const vegetables = ["Капуста", "Репа", "Редиска", "Морковка"];
+//   return vegetables.map((item) => item.length);
+// };
+// console.log(getLengthVegetables());
+
+// 96). Имеется массив простых чисел: numbers = [2, 3, 5, 7, 11, 13, 17, 19].
+// Использую метод reduce() напишите функцию currentSums(numbers),
+// которая возвращает новый массив из такого же числа элементов, в
+// котором на каждой позиции будет находиться сумма элементов массива
+// numbers до этой позиции включительно.
+
+// const currentSums = (numbers) => {
+//   let res = [];
+//   numbers.reduce((sum, current, i) => (res[i] = sum + current), 0);
+//   return res;
+// };
+// console.log(currentSums([2, 3, 5, 7, 11, 13, 17, 19]));
+
+// 97). Напишите код, который получает из массива чисел новый массив,
+// содержащий пары чисел, которые в сумме должны быть равны семи:
+// (0:7), (1:6) и т.д.
+
+// let fn = (a, n) =>
+//   [...Array(2e3)]
+//     .map((x, q) => a.filter((x, i) => q & (1 << i)).sort())
+//     .sort()
+//     .filter((x, i, a) => (x + "" != a[i - 1]) & (eval(x.join`+`) == n));
+// console.info(fn([1, 6, 5, 2, 7, 5, 1, 4, 3], 7));
+
+// 98). Перед вами переменная, содержащая строку. Напишите код, создащий
+// массив, который будет состоять из первых букв слов строки str.
+
+// const foo = (str) => {
+//   let arr = [];
+//   str.split(" ").forEach((el) => {
+//     arr.push(el[0]);
+//   });
+//   return arr;
+// };
+// console.log(foo("Каждый охотник желает знать, где сидит фазан."));
+
+// 98). Перед вами переменная, содержащая строку. Напишите код, создащий
+// массив, который будет состоять из строк, состоящих из предыдущего,
+// текущего и следующего символа строки str.
+
+// const foo = (str) => {
+//   let strArr = [...str];
+//   console.log(strArr.map((el, i, arr) => arr[i - 1] + el + arr[i + 1]));
+// };
+// console.log(foo("JavaScript"));
+
+// 99). Напишите код, преобразующий массив цифр, которые располагаются
+// неупорядоченно, в массив цифр расположенных по убыванию их
+// значений.
+
+// const convertArrayDigits = (arr) => {
+//   return arr.sort((a, b) => a - b).reverse()
+// };
+// console.log(convertArrayDigits([5, 7, 2, 9, 3, 1, 8]));
+
+// 100). Напишите код, объединяющий три массива цифр, и располагающий
+// цифры, в полученном массиве, в порядке убывания их значений.
+
+// const getSharedArray = (arr, arr2, arr3) => {
+//    return arr.concat(arr2, arr3).reverse();
+// };
+// console.log(getSharedArray([1, 2, 3], [4, 5, 6], [7, 8, 9]));
+
+// 101). Дан двухмерный массив с числами, например [[1, 2, 3], [4, 5], [6]]. Найдите
+// сумму элементов этого массива. Массив, конечно же, может быть
+// произвольным. Показать решение.
+
+// const getSumNumbersArray = (arr) => {
+//    let res = [].concat(arr[0],arr[1],arr[2] );
+//    return res
+// }
+// console.log(getSumNumbersArray([[1, 2, 3], [4, 5], [6]]));
+
+// 102). Дан трехмерный массив с числами, например [[[1, 2], [3, 4]], [[5, 6], [7,
+//     8]]]. Найдите сумму элементов этого массива. Массив, конечно же,
+//     может быть произвольным.
+
+// const getSumNumbersArray = (arr) => {
+//    let res = arr.join().split(',');
+//     return res
+//     .map(Number)
+//     .reduce((sum, current) => sum + current, 0);
+// };
+// console.log(getSumNumbersArray([[[1, 2], [3, 4]], [[5, 6], [7, 8]]]));
+
+// 103). Дан массив с числами. Не используя метода reverse переверните его
+// элементы в обратном порядке.
+
+// const getReverseOrder = (arr) => {
+//   var reversArr = [];
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     reversArr.push(arr[i]);
+//   }
+//   return reversArr;
+// };
+// console.log(getReverseOrder([1, 2, 3, 4, 5]));
