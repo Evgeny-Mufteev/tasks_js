@@ -1502,3 +1502,31 @@
 //   return collabArr;
 // };
 // console.log(comparisonArr([1, 2, 4, 7, 8], [1, 2, 8, 3, 5, 6]));
+
+// 111). Создать объект с начальным полем title. Добавить поле с ключом description
+// начальным значением строкой. Добавить метод addField, который при вызове
+// добавляет новое поле в объект с переданным именем и значением
+// addField(fieldName, value), добавить метод editField(fieldName, value), который
+// меняет указанное свойство объекта. Добавить метод удаление свойства
+// deleteField(fieldName), удаляющий указанное поле. Добавить и изменить поля с
+// помощью этих методов.
+
+// const obj = {
+//   title: "",
+//   desk: "",
+//   add: function (key, value) {
+//     return (this[key] = value);
+//   },
+//   edit: function (key, value) {
+//     return (this[key] = value);
+//   },
+//   remove: function (key) {
+//     delete this[key];
+//   },
+// };
+
+// obj.add("age", 33);
+// console.log(obj.age);
+
+// obj.remove("age");
+// console.log(obj);
